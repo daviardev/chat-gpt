@@ -57,8 +57,38 @@
   outline: none;
   padding: 12px;
   font-size: 1rem;
-  box-shadow: 0 0 15px rgba(0,0,0,.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, .1);
   border-color: #8e8ea0;
   border-radius: 5px;
   background-color: #40414f;
+}
+
+.chat_log {
+  text-align: left;
+}
+
+.chat__message.chatgpt {
+  background-color: #444654;
+}
+
+.chat__message_center {
+  padding: 12px;
+  display: flex;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.message {
+  padding-left: 40px;
+  padding-right: 40px;
 }
