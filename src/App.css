@@ -1,0 +1,23 @@
+.App {
+  top: 0 ;
+  left: 0;
+  right: 0;
+  color: #ffffff;
+  bottom: 0;
+  display: flex;
+  position: absolute;
+  text-align: center;
+  background-color: #282c34;
+}
+
+.side__menu {
+  width: 240px;
+  border: 1px solid #ffffff;
+  background-color: #202123;
+}
+
+.chat__box {
+  flex: 1;
+  border: 1px solid #ffffff;
+  background-color: #343541;
+}
