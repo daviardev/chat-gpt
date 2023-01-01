@@ -17,7 +17,9 @@ function App() {
         </div>
       </aside>
       <section className='chat__box'>
-        
+        <div className="chat__input_holder">
+          <textarea className='chat__input_textarea' rows='1' />
+        </div>
       </section>
     </div>
   </>
