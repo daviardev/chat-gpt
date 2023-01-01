@@ -1,12 +1,20 @@
 import React from 'react'
 
+import Plus from './components/Icons/Plus'
+
 import './App.css'
+import './normal.css'
 
 function App() {
   return <>
     <div className="App">
       <aside className="side__menu">
-        <h1>Aside</h1>
+        <div className="side__menu__button">
+          <span>
+            <Plus />
+          </span>
+          New chat
+        </div>
       </aside>
       <section className='chat__box'>
         
