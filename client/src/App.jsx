@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Plus from './components/Icons/Plus'
-import Icon from './components/Icons/Icon'
+import Plus from 'components/Icons/Plus'
+import Icon from 'components/Icons/Icon'
 
 import './App.css'
 import './normal.css'
