@@ -1,12 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import Plus from './components/Icons/Plus'
-import Icon from './components/Icons/Icon'
+import ChatMessage from './components/ChatMessage'
 
 import './App.css'
 import './normal.css'
 
 function App() {
+  const [input, setInput] = useState('')
+  const [chatLog, setChatLog] = useState([{
+    user: 'gpt',
+    message: 'How can I help you today'
+  }, {
+    user: 'me',
+    message: 'I want to use ChatGPT today'
+  }])
+
+  const handleSubmit = async e => {
+    e.preventDefault()
+    setChatLog([ ...chatLog, { user: 'me', message: `${input}` } ])
+    setInput('')
+  }
+
   return <>
     <div className="App">
       <aside className="side__menu">
@@ -19,29 +34,19 @@ function App() {
       </aside>
       <section className='chat__box'>
         <div className="chat_log">
-          <div className="chat__message">
-            <div className="chat__message_center">
-              <div className="avatar">
-
-              </div>
-              <div className="message">
-                Como se hace un console.log en js
-              </div>
-            </div>
-          </div>
-          <div className="chat__message chatgpt">
-            <div className="chat__message_center">
-              <div className="avatar chatgpt">
-                <Icon />
-              </div>
-              <div className="message">
-                console.log("Hola mundo");
-              </div>
-            </div>
-          </div>
+          { chatLog.map((message, index) => (
+            <ChatMessage key={index} message={message} />
+          )) }
         </div>
         <div className="chat__input_holder">
-          <input className='chat__input_textarea' />
+          <form onSubmit={handleSubmit}>
+            <input
+              type='text'
+              value={input}
+              onChange={e => setInput(e.target.value)}
+              className='chat__input_textarea'
+            />
+          </form>
         </div>
       </section>
     </div>
