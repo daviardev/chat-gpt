@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Plus from 'components/Icons/Plus'
-import Icon from 'components/Icons/Icon'
+import Plus from './components/Icons/Plus'
+import Icon from './components/Icons/Icon'
 
 import './App.css'
 import './normal.css'
@@ -41,7 +41,7 @@ function App() {
           </div>
         </div>
         <div className="chat__input_holder">
-          <textarea className='chat__input_textarea' rows='1' />
+          <input className='chat__input_textarea' />
         </div>
       </section>
     </div>
