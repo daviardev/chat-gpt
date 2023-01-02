@@ -31,7 +31,7 @@ function App() {
           </div>
           <div className="chat__message chatgpt">
             <div className="chat__message_center">
-              <div className="avatar">
+              <div className="avatar chatgpt">
                 <Icon />
               </div>
               <div className="message">
