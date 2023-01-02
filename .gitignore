@@ -1,0 +1,5 @@
+# Package
+package-lock.json
+
+# Folder node
+/node_modules
